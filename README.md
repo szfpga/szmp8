@@ -1,4 +1,4 @@
-szmp8 is clone of kcpsm6(version:KCPSM6_Release9_30Sept14),szmp8 is base on verilog and behaver
+szmp8 is clone of kcpsm6(version:KCPSM6_Release9_30Sept14),szmp8 is base on verilog and behaver.
 difference from picobalze(kcpsm6): 1.read_strobe is aheade of one clk compare with kcmps6,so szmp8 can 
                                       read one port at one instruction cycle(2 clks)
                                    2.the interrupt can not be interrupt those instrution
