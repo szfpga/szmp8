@@ -143,7 +143,7 @@ szmp8_alu#(
  )
 szmp8_alu_0(
    .clk(clk),
-   .rst(internal_reset),
+   .rst(internal_reset|stack_pointer_over),
    .t_state_d1(t_state_d1),
    .t_state_d2(t_state_d2),
    .sy_const(sy_const),// 0 for sy, 1 for kk or pp or ss 
