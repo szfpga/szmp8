@@ -290,6 +290,7 @@ begin
          pc <= 12'd0;
          t_state <= 1'b0;
          t_state_d1 <= 1'b0;
+	 t_state_d2 <= 1'b0;
          stack_addra <= 6'h3f;
          stack_wrena <= 1'b0;
          stack_pointer_over <= 1'b0;
