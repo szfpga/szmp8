@@ -316,7 +316,7 @@ begin
                                   stack_wrena <= 1'b1;
                                   stack_addra <= stack_addra + 1'b1;
 											 push_pc <= next_pc;
-                                  pc <= inst_embed_addr;
+                                  pc <= (callsxsy == 1'b1)?{sx_dout[3:0],sx_dout[7:0]}:inst_embed_addr;
                                end
                          end
                   3'b010:begin
@@ -331,7 +331,7 @@ begin
                                end
                          end
                   3'b001:begin
-                            pc <= inst_embed_addr;
+                            pc <= (jumpsxsy == 1'b1)?{sx_dout[3:0],sx_dout[7:0]}:inst_embed_addr;
                          end
                   default:begin // push_stack,pop_stack,jump_cmd are not interrupted by internal_int
                             case({ena_ie,dis_ie})
