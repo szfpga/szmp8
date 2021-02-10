@@ -285,7 +285,7 @@ assign internal_int = interrupt_sync_reg[1];
 
 always@(posedge clk)
 begin
-   if(internal_reset == 1'b1 || (stack_pointer_over) == 1'b1)
+   if(internal_reset == 1'b1 || stack_pointer_over == 1'b1)
       begin
          pc <= 12'd0;
          t_state <= 1'b0;
@@ -368,7 +368,7 @@ begin
 end
 always@(posedge clk)
 begin
-   if(internal_reset == 1'b1 || (stack_pointer_over) == 1'b1)
+   if(internal_reset == 1'b1 || stack_pointer_over == 1'b1)
 	   begin
 		   {reti_bank,reti_z_flag,reti_c_flag} <= 3'b000;
 			internal_int_ack_d1 <= 1'b0;
