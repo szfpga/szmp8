@@ -298,6 +298,7 @@ begin
          ie_flag <= 1'b0;
          interrupt_pc_stack <= 12'd0;
          reti_pop <= 1'b0;
+	 isp_runing <= 1'b0;
       end
    else
       begin
